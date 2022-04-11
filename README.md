@@ -12,11 +12,6 @@ Therefore you’re using Terraform for a personal project, storing state in a lo
 
 -  Backend(S3) supports encryption in transit and encryption on the disk of the state file. 
 
-## Features
- 
- - Automatically store the state file in that backend after each "apply", so there’s no chance of manual error. 
-
--  Backend(S3) supports encryption in transit and encryption on the disk of the state file. 
 
 ## Creating an S3 bucket to store Terraform state file
 
@@ -99,6 +94,8 @@ data "aws_iam_policy_document" "terraform_policy" {
  terrafrom apply
  ```
 
+## Backend set up
+
 Once set up the bucket we can set up the backends.
 Backends define where Terraform's state snapshots are stored.
 Accessing the state in a remote service generally requires some kind of access credentials, since state data contains extremely sensitive information.
@@ -123,3 +120,13 @@ terraform init -backend-config=./file
 Terraform will automatically detect that you already have a state file locally and prompt you to copy it to the new S3 backend. If you type in “yes,” you should see:
 
 
+
+
+## Conclusion
+Here is a simple document on how to use Terraform to  set up s3 bucket-access logs for ALB using terraform
+
+  
+ ### ⚙️ Connect with Me
+<p align="center">
+<a href="https://www.linkedin.com/in/radin-lawrence-8b3270102/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:radin.lawrence@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
