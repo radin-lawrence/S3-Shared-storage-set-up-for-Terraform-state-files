@@ -115,9 +115,10 @@ terraform {
 }
 ```
 
-This assumes we have a bucket created called "mybucket". The Terraform state is written to the key path/to/my/key.
 
-> Note: We have to hardcode the bucket name on the Backend.
+> Note: We have to hardcode the bucket name on the Backend. Make sure to replace "mybucket" with the name of the S3 bucket you created earlier.
+
+ The Terraform state is written to the key path/to/my/key.
 
 
 Note that for the access credentials we recommend using a [partial configuration](https://www.terraform.io/language/settings/backends/configuration#partial-configuration)
