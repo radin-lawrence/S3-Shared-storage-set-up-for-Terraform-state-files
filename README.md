@@ -116,10 +116,11 @@ Note that for the access credentials we recommend using a [partial configuration
 ```bash
 terraform init -backend-config=./file
 ```
+![image](https://user-images.githubusercontent.com/100775027/162683048-5fb42c8e-5ec4-4a05-a2a4-a29cd50b14b5.png)
 
 Terraform will automatically detect that you already have a state file locally and prompt you to copy it to the new S3 backend. If you type in “yes,” you should see:
 
-
+![image](https://user-images.githubusercontent.com/100775027/162683180-6fe91e52-4c45-462d-9bc6-957fdddca893.png)
 
 
 ## Conclusion
