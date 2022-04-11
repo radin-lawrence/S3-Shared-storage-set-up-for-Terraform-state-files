@@ -84,7 +84,10 @@ data "aws_iam_policy_document" "terraform_policy" {
 
 ```
 
+
 > Note: The referenced S3 bucket must have been previously created before setting up the backend.
+
+
 
 ```bash
  terraform init 
@@ -111,11 +114,13 @@ terraform {
 ```
 
 This assumes we have a bucket created called "mybucket". The Terraform state is written to the key path/to/my/key.
+> Note: We have to hardcode the bucket name on the Backend.
 Note that for the access credentials we recommend using a [partial configuration](https://www.terraform.io/language/settings/backends/configuration#partial-configuration)
 
 ```bash
 terraform init -backend-config=./file
 ```
+
 ![image](https://user-images.githubusercontent.com/100775027/162683048-5fb42c8e-5ec4-4a05-a2a4-a29cd50b14b5.png)
 
 Terraform will automatically detect that you already have a state file locally and prompt you to copy it to the new S3 backend. If you type in “yes,” you should see:
