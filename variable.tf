@@ -3,7 +3,7 @@ variable "project" {
  }
 
 variable "name" {
- default = "Bucket name"
+ default = "<Bucket name>"
  }
 variable "region" {
  default = "<your regaion>"
