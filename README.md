@@ -124,7 +124,7 @@ Terraform will automatically detect that you already have a state file locally a
 
 
 ## Conclusion
-Here is a simple document on how to use Terraform to  set up s3 bucket-access logs for ALB using terraform
+Here is a simple document on how to set up terraform backed s3 bucket to store the state file, so each of your team members can easily access the same Terraform state files
 
   
  ### ⚙️ Connect with Me
