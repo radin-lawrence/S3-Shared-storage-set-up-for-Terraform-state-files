@@ -15,7 +15,9 @@ Therefore you’re using Terraform for a personal project, storing state in a lo
 
 ## Creating an S3 bucket to store Terraform state file
 
+
 > Note: It is highly recommended that you enable Bucket Versioning on the S3 bucket to allow for state recovery in the case of accidental deletions and human error.
+
 
 ```bash
 resource "aws_s3_bucket" "terra" {
@@ -114,7 +116,10 @@ terraform {
 ```
 
 This assumes we have a bucket created called "mybucket". The Terraform state is written to the key path/to/my/key.
+
 > Note: We have to hardcode the bucket name on the Backend.
+
+
 Note that for the access credentials we recommend using a [partial configuration](https://www.terraform.io/language/settings/backends/configuration#partial-configuration)
 
 ```bash
